@@ -1,0 +1,10 @@
+streamlit>=1.40
+streamlit-folium>=0.22
+folium>=0.17
+geopandas>=1.0
+shapely>=2.0
+pyproj>=3.6
+pandas>=2.2
+plotly>=5.22
+requests>=2.32
+certifi>=2024.2.2
