@@ -67,6 +67,8 @@ streamlit run app.py
 ```
 No necesita claves: todas las fuentes son públicas.
 
+**Video de respaldo (64 s, software real):** [`docs/video/demo_gaia.mp4`](docs/video/demo_gaia.mp4). Lo genera [`scripts/hacer_video.py`](scripts/hacer_video.py) con Selenium sobre la app corriendo en local.
+
 **Casos para probar (datos reales, en vivo):**
 
 | Lugar | Qué muestra |
