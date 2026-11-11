@@ -14,6 +14,7 @@ descargado de crt.sectigo.com), así la conexión se sigue verificando.
 from __future__ import annotations
 
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 from pathlib import Path
@@ -71,16 +72,21 @@ _SESION = requests.Session()
 _SESION.headers["User-Agent"] = "consorcio-gaia/1.0 (proyecto academico Q-Lab PUCP)"
 
 
-def _get_json(url: str, params: dict) -> dict:
-    try:
-        r = _SESION.get(url, params=params, timeout=TIMEOUT, verify=_paquete_certificados())
-        r.raise_for_status()
-        datos = r.json()
-    except (requests.RequestException, ValueError) as e:
-        raise CatastroError(f"No se pudo consultar {url.split('/services/')[-1]}: {e}") from e
-    if "error" in datos:
-        raise CatastroError(f"INGEMMET respondió con error: {datos['error']}")
-    return datos
+def _get_json(url: str, params: dict, intentos: int = 3) -> dict:
+    """GET con reintentos: el servidor de INGEMMET a veces corta una consulta y responde a la siguiente."""
+    ultimo = None
+    for i in range(intentos):
+        try:
+            r = _SESION.get(url, params=params, timeout=TIMEOUT, verify=_paquete_certificados())
+            r.raise_for_status()
+            datos = r.json()
+            if "error" in datos:
+                raise ValueError(f"INGEMMET respondió con error: {datos['error']}")
+            return datos
+        except (requests.RequestException, ValueError) as e:
+            ultimo = e
+            time.sleep(1.5 * (i + 1))
+    raise CatastroError(f"No se pudo consultar {url.split('/services/')[-1]}: {ultimo}") from ultimo
 
 
 def _params_bbox(bbox: tuple[float, float, float, float], campos: str) -> dict:

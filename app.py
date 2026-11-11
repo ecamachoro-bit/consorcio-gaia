@@ -100,6 +100,8 @@ with tab_area:
                 celdas = geo.armar_cuadriculas(lon, lat, hectareas)
                 bbox = geo.bbox_consulta(celdas)
                 derechos, restringidas, fallas = consultar(bbox)
+                if fallas:  # no guardar en caché una respuesta incompleta
+                    consultar.clear()
                 ev = geo.evaluar(celdas, derechos, restringidas, (lon, lat))
             st.session_state["res"] = dict(lon=lon, lat=lat, lugar=lugar, ev=ev, derechos=derechos,
                                            restringidas=restringidas, fallas=fallas, hectareas=hectareas)
