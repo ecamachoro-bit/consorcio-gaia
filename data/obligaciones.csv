@@ -1,0 +1,22 @@
+obligacion,tipo,entidad,frecuencia,meses,dia,fecha_unica,perfil,nota,si_no_cumple
+Pago del derecho de vigencia y penalidad,Minero,INGEMMET,anual,6,30,,titular,Se paga desde el primer día hábil de enero; US$ por hectárea según régimen,2 años sin pagar (consecutivos o no) = caducidad
+Acreditación de inversión mínima del año anterior,Minero,INGEMMET / MINEM,anual,4,30,,titular,Permite evitar la penalidad,Se pierde la opción de evitar la penalidad
+Acreditación de producción mínima del año anterior,Minero,INGEMMET / MINEM,anual,6,30,,titular,PPM: 10% UIT/ha; PMA: 5% UIT/ha; general: 1 UIT/ha,Penalidad creciente y al final caducidad
+Declaración Anual Consolidada (DAC),Minero,MINEM – extranet,anual,7,10,,titular,Del 3 al 10 de julio según el último dígito del RUC (patrón 2026),Multa
+ESTAMIN – estadística mensual de producción,Minero,MINEM – extranet,mensual,,10,,titular,Alrededor del día 10 de cada mes,Multa
+Declaración Semestral de Producción (DSP) – 2.º semestre,Formalización,MINEM – DGFM,anual,1,12,,reinfo,Inscritos en REINFO (o en el régimen que lo reemplace),Suspensión del REINFO
+Declaración Semestral de Producción (DSP) – 1.er semestre,Formalización,MINEM – DGFM,anual,7,10,,reinfo,Inscritos en REINFO (o en el régimen que lo reemplace),Suspensión del REINFO
+Fin de la vigencia del REINFO (Ley 32537),Formalización,MINEM,unica,,,2026-12-31,reinfo,Salvo nueva norma; seguir la Ley MAPE y el FORMAPE en el Congreso,Sin REINFO vigente no se puede operar mientras se formaliza
+Control de bajas de explosivos,Explosivos,SUCAMEC,mensual,,7,,explosivos,Alrededor del día 7,Multa y suspensión de la licencia
+Reporte de consumo de agua,Agua,ANA / ALA,mensual,,7,,agua,Alrededor del día 7,Multa
+Pago de aportes AFP (con 4% complementario de riesgo minero),Laboral,AFP / SUNAT,mensual,,7,,empleador,2% trabajador y 2% empleador,Intereses y multa
+Pago de CTS,Laboral,Empleador,anual,5|11,15,,empleador,Mayo y noviembre,Multa SUNAFIL
+Gratificación,Laboral,Empleador,anual,7|12,15,,empleador,Julio y diciembre,Multa SUNAFIL
+Participación de utilidades,Laboral,Empleador,anual,4,30,,empleador,Abril–mayo según el caso,Multa SUNAFIL
+Declaraciones mensuales (IGV-renta) y RC/RVI e IQBF,Tributario,SUNAT,mensual,,20,,ruc,Entre el día 13 y el 24 según el último dígito del RUC,Multa e intereses; puede bloquear el RECPO
+Declaración anual de renta,Tributario,SUNAT,anual,3,31,,ruc,Marzo–junio según RUC y tipo de contribuyente,Multa
+Manifiestos de residuos peligrosos (Sigersol),Ambiental,MINAM,anual,1|4|7|10,22,,titular,Trimestral,Multa OEFA/GORE
+Declaración anual de manejo de residuos sólidos,Ambiental,MINAM,anual,4,23,,titular,Anual,Multa
+Auditoría externa del sistema de seguridad y salud (SGSSO),Seguridad,MINEM / SUNAFIL,anual,3,31,,empleador,Anual,Multa
+Plan de minado y plan anual SSOMA del año siguiente,Seguridad,Autoridad competente,anual,12,31,,titular,Copia del acta de aprobación,Multa
+Informe Anual del Oficial de Cumplimiento (lavado de activos),Legal,UIF – SBS,anual,2,15,,empresa,Personas jurídicas obligadas,Multa
