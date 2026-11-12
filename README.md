@@ -57,7 +57,7 @@ Además:
 
 ## 6. Demo
 
-**URL pública:** _se completa al desplegar en Streamlit Community Cloud_
+**URL pública:** https://consorcio-gaia-xzs9rqzjiohryqks4cqtkg.streamlit.app
 **En local:**
 ```bash
 git clone https://github.com/ecamachoro-bit/consorcio-gaia.git
